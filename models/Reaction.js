@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, Types } = require('mongoose');
 const moment = require('moment');
 
 // Schema to create Reaction model
@@ -10,7 +10,7 @@ const reactionSchema = new Schema({
     reactionBody: {
         type: String,
         required: true,
-        maxlength: [280]
+        maxlength: 280
     },
     username: {
         type: String,
